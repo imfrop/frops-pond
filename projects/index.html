@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>frop's pond | projects</title>
+      <link rel="shortcut icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../style.css">
+      <link rel="stylesheet" href="../css/owl.carousel.min.css">
+      <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    
+      <script type="text/javascript" src="../js/instafeed.min.js"></script>
+    
+      <script src="../js/jquery.min.js"></script>
+      <script src="../js/owl.carousel.min.js"></script>
+    </head>
+    <body>
+    <!-- header section-->
+    <div class="page-wrap">
+      <header class="fixed-bar">
+        <div class="banner">
+          <object data="../images/frog_icon_trnsp.svg" type="image/svg+xml" width="128" height="128" class="icon"></object>
+        </div>
+      </header>
+    <!-- navbar -->
+      <div class="navigation">
+        <a href="../">home</a>
+        <a href="/about/">about me</a>
+        <a class="active" href="">projects</a>
+      </div>
+
+      <!-- main -->
+      <main>
+        <div id="instafeed" class="owl-carousel owl-theme owl-loaded owl-drag"></div>
+
+        <script type="text/javascript">
+          var feed = new Instafeed({
+            accessToken: 'IGQVJXMDlzcmxUa0J6Q3ZAsTXAtY01Tbi1VVEttZAjlQNGRNOE9yQzVJUUxfdlhlQjZAkWXJSbUl3SDBkbWZACb2NaSGVhQUlGWGdTNnB0UTU0eWdKMGlwYnBSQWdYbDdpYkNKcGFReERrMk1waTFvSE1BTQZDZD',
+            template:'<div class="item"><a href="{{link}}" target="_blank"><img title="{{caption}}" src="{{image}}" /></a></div>',
+            after: function(){
+      
+              $('.owl-carousel').owlCarousel({
+                loop: true,
+                stagePadding: 20,
+                margin: 40,
+                nav: false,
+                responsiveClass: true,
+                responsive:{
+                  0:{
+                    items:1
+                    
+                  },
+                  600:{
+                    items:3
+                    
+                  },
+                  1000:{
+                    items:5,							
+                    loop:true
+                  }
+                }
+              });
+            }
+          });
+      
+      
+          feed.run();
+      
+        </script>
+
+
+      </main>
+    </div>
+    <!-- footer section -->
+      <footer>
+        <p class="copyright"> &copy; 2022 frop foundation. all rights reserved.</p>
+      </footer>
+
+    </body>
+</html>
