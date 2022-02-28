@@ -7,18 +7,24 @@ html, body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
   }
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 1200px) {
 body#links {
-            background: url('/images/wallpaper.png') center repeat-x;
-            background-repeat: repeat-y;
-            padding: 6% 0 0 0;
+            background: url('/images/wallpaper.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100%;
+            padding: 6% 0 8% 0;
+            overflow-y: hidden;
 }
   }
   
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 1200px) {
 body#links {
-        background: url('/images/wallpaper.png') center repeat-x;
+        background: url('/images/wallpaper.png');
+        background-repeat: repeat;
+        background-attachment: fixed;
         padding: 6%;
+        overflow-y: hidden;
     }
 
 }
@@ -263,8 +269,9 @@ figure {
     .linkspage {
         margin-left: auto;
         margin-right: auto;
-        height: calc(100% - 6%);
-        width: calc(100% - 12.5%);
+        width: calc(100% - 3%);
+        margin-top: calc(100% - 96.1%);
+        margin-bottom: calc(100% - 89%);
         border: 1px solid #818181;
         border-radius: 5px;
         padding: 5px;
@@ -297,7 +304,7 @@ figure {
         max-width: 250px;
         margin: 0 auto 15px;
         padding: 15px 20px;
-        font-size:.85rem;
+        font-size: .85rem;
         color: #818181;;
         border: 2px solid #818181;
         border-radius: 5px;
@@ -321,16 +328,7 @@ figure {
         height: calc(100% - 4px);
         border: 2px solid #131313
     }
-    
-    .socials h2 {
-        font-size: 14px;
-        text-transform: uppercase;
-        font-weight: 400;
-        letter-spacing: 2px;
-        margin-bottom: 15px;
-        
-    }
-    
+
     .channels {
         display: flex;
         max-width: 250px;
@@ -363,6 +361,7 @@ figure {
     margin-left: auto;
     margin-right: auto;
     width: calc(100% - 33.6%);
+    height: 100%;
     border: 1px solid #818181;
     border-radius: 5px;
     padding: 5px;
@@ -464,26 +463,16 @@ figure {
     background-color: #131313;
     box-shadow: 0 0 5px #c0c0c0;
 }*/
-.linkspage h1, h3, h4 {
+.linkspage h4 {
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
-}
-.linkspage h1{
-    font-size: 40px;
-}
-.linkspage h3 {
-    font-size: 16px;
-    margin-bottom: 2px;
-    margin-top: 15px;
-}
-
-.linkspage h4 {
     margin-top: 0;
+    margin-bottom: 15px;
     font-size: 16px;
 }
 
-.linkspage p {
+.linkspage #frog {
     width: 100%;
     margin: 15px;
     margin-left: auto;
